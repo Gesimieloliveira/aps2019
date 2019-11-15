@@ -16,7 +16,7 @@
         @include('admin.estagiarios._form')
 
         <button class="btn deep-orange">Salvar</button>
-    </form>s
+    </form>
     </div>
 
 </div>

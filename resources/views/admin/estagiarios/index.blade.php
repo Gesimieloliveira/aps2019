@@ -19,6 +19,7 @@
     <th>Titulo</th>
     <th>Descrição</th>
     <th>Imagem</th>
+    <th>Valor</th>
     <th>Disponivel</th>
     <th>Ação</th>
 </tr>
@@ -33,9 +34,18 @@
     <td>{{$registro->titulo }}</td>
     <td>{{$registro->descricao }}</td>
     <td><img width="70" src="{{asset($registro->imagem)}}" alt="{{$registro->titulo }}"></td>
-    <td>{{$registro->publicado }}</td>
+    <td>R${{$registro->valor }}</td>
+    <td class="blue-text text-darken-3" >{{$registro->publicado }}</td>
+    
     <td><a class="btn deep-orange" href="{{route( 'admin.estagiarios.editar', $registro->id)}}">Editar</a></td>
-    <td><a class="btn red" href="{{route( 'admin.estagiarios.deletar', $registro->id)}}">Deletar</a></td>
+    
+    <td> 
+        <form method="POST" action="{{route( 'admin.estagiarios.deletar', $registro->id)}}">
+           {{@method_field('DELETE')}}
+        <input type="hidden" name="_token" value="{{csrf_token()}}">
+            <button type="submit" class="btn red">Deletar</button>
+        </form>
+    </td>
     
     </tr>
 

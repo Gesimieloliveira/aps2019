@@ -13,18 +13,20 @@
     @foreach ($estagiarios as $estagio)
         
    
-<div class="col s12 m7">
+<div class="col s12 m3">
     <div class="card">
     <div class="card-image">
-    <img src="{{asset($estagio->imagem)}}}}">
-        <span class="card-title">Card Title</span>
+    <img  src="{{asset($estagio->imagem)}}">
+        <span class="card-title">{{$estagio->titulo}}</span>
     </div>
     <div class="card-content">
     <h4>{{$estagio->titulo}}</h4>
-    <p>{{$estagio->descricao}}}}</p>
+    <p>{{$estagio->descricao}}</p>
+    
+    <small>R${{$estagio->valor}}</small>
     </div>
     <div class="card-action">
-        <a href="#">Ver mais...</a>
+        <a href="/">Inscreva-se</a>
     </div>
     </div>
 </div>

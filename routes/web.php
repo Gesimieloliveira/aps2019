@@ -25,4 +25,4 @@ Route::get('/admin/estagiarios/adicionar', ['as'=>'admin.estagiarios.adicionar',
 Route::post('/admin/estagiarios/salvar', ['as'=>'admin.estagiarios.salvar', 'uses'=>'Admin\EstagiarioController@salvar']);
 Route::get('/admin/estagiarios/editar/{id}', ['as'=>'admin.estagiarios.editar', 'uses'=>'Admin\EstagiarioController@editar']);
 Route::put('/admin/estagiarios/atualizar/{id}', ['as'=>'admin.estagiarios.atualizar', 'uses'=>'Admin\EstagiarioController@atualizar']);
-Route::put('/admin/estagiarios/deletar/{id}', ['as'=>'admin.estagiarios.deletar', 'uses'=>'Admin\EstagiarioController@deletar']);
+Route::delete('/admin/estagiarios/deletar/{id}', ['as'=>'admin.estagiarios.deletar', 'uses'=>'Admin\EstagiarioController@deletar']);

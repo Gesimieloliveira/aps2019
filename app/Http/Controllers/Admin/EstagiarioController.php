@@ -27,7 +27,7 @@ if (isset($dados['publicado'])) {
 }
 
         if ($req->hasFile('imagem')) {
-            $imagem = $req->file('image');
+            $imagem = $req->file('imagem');
             $num = rand(1111,9999);
             $dir = "img/estagiario";
             $ex = $imagem->guessClientExtension();
@@ -56,7 +56,7 @@ if (isset($dados['publicado'])) {
 }
 
         if ($req->hasFile('imagem')) {
-            $imagem = $req->file('image');
+            $imagem = $req->file('imagem');
             $num = rand(1111,9999);
             $dir = "img/estagiarios";
             $ex = $imagem->guessClientExtension();
@@ -72,8 +72,10 @@ if (isset($dados['publicado'])) {
 
     public function deletar($id)
     {
+       // $id ->delete();
+       // return redirect('admin.estagiarios');
         Estagiario::find($id)->delete();
-        return redirect()->route('admin.estagiarios');
+       return redirect()->route('admin.estagiarios');
 
     }
 }
