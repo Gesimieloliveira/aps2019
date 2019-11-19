@@ -28,3 +28,10 @@ php artisan migrate
 php artisan serve
 
 
+## Percentual participação:
+Gesimiel de Oliveira: 100%
+Raelson Araujo de Souza Kampim: 100%
+Jean Pierre Burato Filho: 100%
+Tiago Ferreira Persch: 100%
+Vinicios Almeida dos Santos: 100% 
+
